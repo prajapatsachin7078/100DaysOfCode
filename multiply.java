@@ -3,5 +3,6 @@ public class multiply {
         int a = 5;
         int b = 4;
         System.out.println("Multiplication of " + a + " and " + b + " " + a*b);
+        System.out.println("Sum of " + a + " and " + b + " " + a+b);
     }
 }
