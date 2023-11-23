@@ -27,5 +27,4 @@ public class StockBuySell {
         sc.close();
 
     }
-    
 }
