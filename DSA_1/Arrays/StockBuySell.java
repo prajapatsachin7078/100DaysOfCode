@@ -18,7 +18,7 @@ public class StockBuySell {
             prices[index] = sc.nextInt();
         }
         for(int i = 1;i<n;i++){
-            if(prices[i-1]>prices[i])
+            if(prices[i]>prices[i-1])
                 maxProfit+=prices[i]-prices[i-1];
         }
 
