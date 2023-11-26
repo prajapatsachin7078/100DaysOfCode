@@ -38,7 +38,7 @@ public class KConsecutiveElementMaxSum {
         int max_sum = window_sum;
         for (int i=k; i<n; i++) {
             window_sum += (arr[i]-arr[i-k]);
-            max_sum = Math.max(window_sum,max_sum);
+            max_sum = Math.max(window_sum,max_sum); // compare current window with new window sum
         }
         return max_sum;
     }
