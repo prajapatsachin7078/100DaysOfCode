@@ -18,6 +18,7 @@ public class KConsecutiveElementMaxSum {
 
         int sum = maxSum(arr,n,k);
         System.out.println("The maximum sum is "+sum);
+        sc.close();
     }
 
     private static int maxSum(int[] arr, int n,int k) {
