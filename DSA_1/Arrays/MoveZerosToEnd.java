@@ -18,6 +18,7 @@ public class MoveZerosToEnd {
         for (int val : arr) {
             System.out.printf("%d ",val);
         }
+        sc.close();
     }
 
     private static int[] moveZeroToEnd(int[] arr, int n) {
