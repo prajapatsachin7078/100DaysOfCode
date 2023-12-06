@@ -10,11 +10,8 @@ public class BinaryString {
         int T = sc.nextInt();
 
         for (int t = 0; t < T; t++) {
-            // Input for each test case
-            int N = sc.nextInt();  // Length of the string
-            sc.nextLine();  // Consume the newline
+            
             String S = sc.nextLine();  // The string
-
             System.out.println(countSubstrings(S));
         }
 
