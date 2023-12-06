@@ -5,32 +5,33 @@ import java.util.Scanner;
 public class TransposeOfMatrix {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();// as matrix should be square matrix
-        int[][] arr = new int[n][n];
-        
-         for(int i = 0;i<n;i++){
-            for(int j = 0;j<n;j++){
-                
-                arr[i][j]= sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();// as matrix should be square matrix
+            int[][] arr = new int[n][n];
+            
+             for(int i = 0;i<n;i++){
+                for(int j = 0;j<n;j++){
+                    
+                    arr[i][j]= sc.nextInt();
+                }
             }
-        }
-        System.out.println("Before transpose:");
-         for(int i = 0;i<n;i++){
-            for(int j = 0;j<n;j++){
-                
-                System.out.print(arr[i][j] + " ");
+            System.out.println("Before transpose:");
+             for(int i = 0;i<n;i++){
+                for(int j = 0;j<n;j++){
+                    
+                    System.out.print(arr[i][j] + " ");
+                }
+                System.out.println();
             }
-            System.out.println();
-        }
-        transpose(n,arr);
-        System.out.println("After transpose:");
-        for(int i = 0;i<n;i++){
-            for(int j = 0;j<n;j++){
-                
-                System.out.print(arr[i][j] + " ");
+            transpose(n,arr);
+            System.out.println("After transpose:");
+            for(int i = 0;i<n;i++){
+                for(int j = 0;j<n;j++){
+                    
+                    System.out.print(arr[i][j] + " ");
+                }
+                System.out.println();
             }
-            System.out.println();
         }
     }
     

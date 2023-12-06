@@ -16,26 +16,26 @@ public class EquilibruimThreeArrays {
         System.out.println("Array has equilibrium point: "+ hasEqualArrays1(arr,n));
         sc.close();
     }
-    private static boolean hasEqualArrays2(int[] arr, int n){
-        int lsum = 0,rsum = 0,msum = 0;
-        int temp = 0;
+    // private static boolean hasEqualArrays2(int[] arr, int n){
+    //     int lsum = 0,rsum = 0,msum = 0;
+    //     int temp = 0;
 
-        for(int val: arr)// get the total sum as left sum
-            lsum+=val;
+    //     for(int val: arr)// get the total sum as left sum
+    //         lsum+=val;
         
-        for(int i = n-1;i>=0;i--){
-            if(lsum == msum && msum == rsum)
-                return true;
+    //     for(int i = n-1;i>=0;i--){
+    //         if(lsum == msum && msum == rsum)
+    //             return true;
             
-            lsum-=arr[i];
-            msum+=arr[i];
+    //         lsum-=arr[i];
+    //         msum+=arr[i];
             
-        }
+    //     }
 
 
 
-        return false;
-    }
+    //     return false;
+    // }
 
     private static boolean hasEqualArrays1(int[] arr, int n) {
         boolean isTwoEquillExist = false;

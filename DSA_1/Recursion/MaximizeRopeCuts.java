@@ -22,10 +22,11 @@ class MaximizeRopeCuts {
 	}
     public static void main(String [] args) 
     {   
-        Scanner sc = new Scanner(System.in);
-    	int n = sc.nextInt(),a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();;
-    	
-    	System.out.println(maxCuts(n, a, b, c));
+        try (Scanner sc = new Scanner(System.in)) {
+			int n = sc.nextInt(),a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();;
+			
+			System.out.println(maxCuts(n, a, b, c));
+		}
         
     }
 

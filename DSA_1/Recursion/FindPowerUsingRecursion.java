@@ -9,18 +9,19 @@ class Driver_class
 {
     public static void main(String args[])
     {
-        Scanner sc = new Scanner(System.in);
-        int t  = sc.nextInt();//testcases
-        
-        while(t-- > 0)
-        {
-            //input n and p
-            int n = sc.nextInt();
-            int p = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            int t  = sc.nextInt();//testcases
             
-            new Solution();
-            //calling RecursivePower() method 
-            System.out.println(Solution.RecursivePower(n,p));
+            while(t-- > 0)
+            {
+                //input n and p
+                int n = sc.nextInt();
+                int p = sc.nextInt();
+                
+                new Solution();
+                //calling RecursivePower() method 
+                System.out.println(Solution.RecursivePower(n,p));
+            }
         }
     }
 }
