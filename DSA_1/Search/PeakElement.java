@@ -10,33 +10,39 @@ public class PeakElement {
             for(int i = 0;i<n;i++){
                 arr[i] = sc.nextInt();
             }
-            System.out.println("PeakElement: " + peakElement(arr, n));
+            System.out.println("PeakElement: " + findPeak(arr, n));
         }
     }
 
     	// Function to find the peak element
 	// arr[]: input array
 	// n: size of array a[]
-	public static int peakElement(int[] arr,int n)
-    {
-       //add code here.
-        int left = 0;
-        int right = n-1;
-    
-        while (left < right) {
-            int mid = left + (right - left) / 2;
-    
-            // Compare the middle element with its neighbors
-            if (arr[mid] > arr[mid + 1]) {
-                // The peak might be on the left side
-                right = mid;
-            } else {
-                // The peak might be on the right side (or mid itself)
-                left = mid + 1;
-            }
-        }
-    
-        // At the end of the loop, 'left' and 'right' will be pointing to a potential peak element
-        return left;
-    }
+	// A binary search based function that returns index of
+	// a peak element
+	static int findPeak(int arr[], int n)
+	{
+		int l = 0;
+		int r = n-1;
+		int mid = 0;
+	
+		while (l <= r) {
+
+			// finding mid by binary right shifting.
+			mid = (l + r) >> 1;
+
+			// first case if mid is the answer
+			if ((mid == 0|| arr[mid - 1] <= arr[mid])&& (mid == n - 1|| arr[mid + 1] <= arr[mid]))
+				break;
+
+			// move the right pointer
+			if (mid > 0 && arr[mid - 1] > arr[mid])
+				r = mid - 1;
+
+			// move the left pointer
+			else
+				l = mid + 1;
+		}
+	
+		return mid;
+	}
 }
